@@ -1,0 +1,3 @@
+[submodule "prayer-timing"]
+	path = prayer-timing
+	url = https://github.com/mactator/prayer-timing.git
