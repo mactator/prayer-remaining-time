@@ -68,7 +68,7 @@ export default function MainContent() {
   const getTimings = async () => {
     console.log("calling api");
     const response = await axios.get(
-      `http://api.aladhan.com/v1/timingsByCity?country=SA&city=${city.apiName}`
+      `https://api.aladhan.com/v1/timingsByCity?country=SA&city=${city.apiName}`
     );
     setTimings(response.data.data.timings);
   };
@@ -175,26 +175,30 @@ export default function MainContent() {
         justifyContent="space-around"
         style={{ marginTop: "50px" }}
       >
-        <Prayer prayer="الفجر " time={timings.Fajr} image="fajr-prayer.png" />
+        <Prayer
+          prayer="الفجر "
+          time={timings.Fajr}
+          image="https://cdn.pixabay.com/photo/2024/03/06/08/56/ai-generated-8616062_1280.jpg"
+        />
         <Prayer
           prayer="الظهر "
           time={timings.Dhuhr}
-          image="dhhr-prayer-mosque.png"
+          image="https://cdn.pixabay.com/photo/2020/11/24/18/58/mosque-5773586_1280.jpg"
         />
         <Prayer
           prayer="العصر "
           time={timings.Asr}
-          image="asr-prayer-mosque.png"
+          image="https://cdn.pixabay.com/photo/2015/01/28/23/10/mosque-615415_1280.jpg"
         />
         <Prayer
           prayer="المغرب "
           time={timings.Maghrib}
-          image="sunset-prayer-mosque.png"
+          image="https://cdn.pixabay.com/photo/2024/03/16/02/09/ai-generated-8636065_1280.png"
         />
         <Prayer
           prayer="العشاء "
           time={timings.Isha}
-          image="night-prayer-mosque.png"
+          image="https://cdn.pixabay.com/photo/2022/03/10/13/46/mosque-7059889_1280.png"
         />
       </Stack>
 

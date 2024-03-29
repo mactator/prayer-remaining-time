@@ -16,7 +16,7 @@ export default function ImgMediaCard({ prayer, time, image }) {
         component="img"
         alt="green iguana"
         height="140"
-        image={`src/assets/${image}`}
+        image={image}
       />
       <CardContent>
         <h2>{prayer}</h2>
